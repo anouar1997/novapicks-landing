@@ -1,297 +1,1104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Revive360 – The Morning Ritual Changing How People Age</title>
+  <meta name="description" content="Discover the overlooked nutrient connection scientists are calling the most important wellness finding of the decade. See what thousands are quietly talking about." />
+  <meta property="og:title" content="Revive360 – The Morning Ritual Changing How People Age" />
+  <meta property="og:description" content="Discover the overlooked nutrient connection scientists are calling the most important wellness finding of the decade." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?w=1200&q=80" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="robots" content="index, follow" />
+  <meta name="google-site-verification" content="LqVLQB6OP4MOwvgJoAtcIMN4Zubm3-AaUaOxrLaNnxw" />
 
-<title>Most People Never Discover This</title>
-<meta name="description" content="A simple discovery that has caught the attention of thousands. Learn more on the official page.">
+  <!-- Meta Pixel -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '4293323117647867');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=4293323117647867&ev=PageView&noscript=1"
+  /></noscript>
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '4293323117647867');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=4293323117647867&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-<style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+  <!-- Google Analytics Placeholder -->
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> -->
 
-body{
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-background:#f7f7f7;
-color:#111;
-overflow-x:hidden;
-}
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', sans-serif;
+      background: #f8fafc;
+      color: #1a2332;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { cursor: pointer; border: none; background: none; font-family: inherit; }
 
-.wrapper{
-max-width:850px;
-margin:auto;
-padding:0 20px;
-}
+    /* ===== CSS VARIABLES ===== */
+    :root {
+      --white: #ffffff;
+      --off-white: #f8fafc;
+      --blue-50: #eff6ff;
+      --blue-100: #dbeafe;
+      --blue-500: #3b82f6;
+      --blue-600: #2563eb;
+      --blue-700: #1d4ed8;
+      --green-400: #4ade80;
+      --green-500: #22c55e;
+      --green-600: #16a34a;
+      --slate-100: #f1f5f9;
+      --slate-200: #e2e8f0;
+      --slate-400: #94a3b8;
+      --slate-500: #64748b;
+      --slate-600: #475569;
+      --slate-700: #334155;
+      --slate-800: #1e293b;
+      --slate-900: #0f172a;
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 32px;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,.06), 0 1px 2px rgba(0,0,0,.04);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.08), 0 2px 6px rgba(0,0,0,.05);
+      --shadow-lg: 0 12px 40px rgba(0,0,0,.10), 0 4px 12px rgba(0,0,0,.06);
+      --shadow-xl: 0 24px 64px rgba(0,0,0,.12), 0 8px 24px rgba(0,0,0,.08);
+      --glass-bg: rgba(255,255,255,0.72);
+      --glass-border: rgba(255,255,255,0.55);
+      --glass-blur: blur(20px);
+    }
 
-.top-bar{
-background:#0f172a;
-color:white;
-text-align:center;
-padding:10px;
-font-size:12px;
-font-weight:600;
-letter-spacing:1px;
-}
+    /* ===== ANIMATIONS ===== */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      33%       { transform: translateY(-18px) rotate(2deg); }
+      66%       { transform: translateY(-8px) rotate(-1deg); }
+    }
+    @keyframes floatSlow {
+      0%, 100% { transform: translateY(0px) scale(1); }
+      50%       { transform: translateY(-24px) scale(1.04); }
+    }
+    @keyframes pulse-ring {
+      0%   { box-shadow: 0 0 0 0 rgba(34,197,94,.40), 0 8px 32px rgba(34,197,94,.25); }
+      60%  { box-shadow: 0 0 0 14px rgba(34,197,94,.00), 0 8px 32px rgba(34,197,94,.25); }
+      100% { box-shadow: 0 0 0 0 rgba(34,197,94,.00), 0 8px 32px rgba(34,197,94,.25); }
+    }
+    @keyframes shimmer {
+      0%   { background-position: -200% center; }
+      100% { background-position: 200% center; }
+    }
+    @keyframes spin-slow {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+    @keyframes orbit {
+      from { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+      to   { transform: rotate(360deg) translateX(60px) rotate(-360deg); }
+    }
 
-.hero{
-padding:40px 0;
-text-align:center;
-}
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(32px);
+      transition: opacity .65s cubic-bezier(.22,.68,0,1.2), transform .65s cubic-bezier(.22,.68,0,1.2);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-delay-1 { transition-delay: .1s; }
+    .reveal-delay-2 { transition-delay: .2s; }
+    .reveal-delay-3 { transition-delay: .3s; }
 
-.badge{
-display:inline-block;
-background:#eef2ff;
-color:#4338ca;
-padding:8px 14px;
-border-radius:50px;
-font-size:13px;
-font-weight:600;
-margin-bottom:20px;
-}
+    /* ===== ANNOUNCEMENT BAR ===== */
+    .announcement-bar {
+      background: linear-gradient(90deg, #1d4ed8, #2563eb, #3b82f6, #2563eb, #1d4ed8);
+      background-size: 300% auto;
+      animation: shimmer 5s linear infinite;
+      color: #fff;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: .8rem;
+      font-weight: 500;
+      letter-spacing: .02em;
+      position: relative;
+      z-index: 100;
+    }
+    .announcement-bar span { opacity: .75; margin: 0 8px; }
 
-h1{
-font-size:56px;
-line-height:1.05;
-font-weight:800;
-letter-spacing:-2px;
-margin-bottom:18px;
-}
+    /* ===== NAVBAR ===== */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      background: var(--glass-bg);
+      backdrop-filter: var(--glass-blur);
+      -webkit-backdrop-filter: var(--glass-blur);
+      border-bottom: 1px solid var(--glass-border);
+      padding: 14px 24px;
+    }
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -.02em;
+      color: var(--slate-900);
+    }
+    .nav-logo span { color: var(--blue-600); }
+    .nav-badge {
+      background: var(--green-500);
+      color: #fff;
+      font-size: .68rem;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 99px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
 
-.red{
-color:#dc2626;
-}
+    /* ===== HERO ===== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 60px 24px 80px;
+      background: linear-gradient(160deg, #eff6ff 0%, #f8fafc 40%, #f0fdf4 100%);
+    }
+    .hero-bg-orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      will-change: transform;
+    }
+    .orb-1 {
+      width: 520px; height: 520px;
+      background: radial-gradient(circle, rgba(59,130,246,.14) 0%, transparent 70%);
+      top: -180px; right: -120px;
+      animation: floatSlow 9s ease-in-out infinite;
+    }
+    .orb-2 {
+      width: 380px; height: 380px;
+      background: radial-gradient(circle, rgba(34,197,94,.10) 0%, transparent 70%);
+      bottom: -100px; left: -100px;
+      animation: floatSlow 12s ease-in-out infinite reverse;
+    }
+    .orb-3 {
+      width: 200px; height: 200px;
+      background: radial-gradient(circle, rgba(99,102,241,.08) 0%, transparent 70%);
+      top: 40%; left: 30%;
+      animation: floatSlow 7s ease-in-out infinite;
+    }
+    .hero-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--glass-bg);
+      backdrop-filter: var(--glass-blur);
+      border: 1px solid var(--glass-border);
+      border-radius: 99px;
+      padding: 6px 14px 6px 8px;
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--blue-700);
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-sm);
+      animation: fadeInUp .6s ease both;
+    }
+    .eyebrow-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--green-500);
+      animation: pulse-ring 2s ease-out infinite;
+      flex-shrink: 0;
+    }
+    .hero-headline {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.12;
+      letter-spacing: -.03em;
+      color: var(--slate-900);
+      margin-bottom: 20px;
+      animation: fadeInUp .7s .1s ease both;
+    }
+    .hero-headline em {
+      font-style: normal;
+      background: linear-gradient(135deg, var(--blue-600), var(--green-500));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      color: var(--slate-600);
+      max-width: 580px;
+      line-height: 1.7;
+      margin-bottom: 32px;
+      animation: fadeInUp .7s .2s ease both;
+    }
+    .hero-cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      animation: fadeInUp .7s .3s ease both;
+    }
+    .cta-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--green-500), var(--green-600));
+      color: #fff;
+      font-size: 1.05rem;
+      font-weight: 700;
+      padding: 18px 36px;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 8px 32px rgba(34,197,94,.30);
+      animation: pulse-ring 2.5s ease-out infinite;
+      transition: transform .2s ease, box-shadow .2s ease;
+      letter-spacing: -.01em;
+      width: 100%;
+      max-width: 420px;
+    }
+    .cta-primary:hover {
+      transform: translateY(-2px) scale(1.01);
+      box-shadow: 0 12px 40px rgba(34,197,94,.40);
+      animation-play-state: paused;
+    }
+    .cta-primary svg { flex-shrink: 0; }
+    .cta-note {
+      font-size: .8rem;
+      color: var(--slate-400);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .cta-note::before { content: '🔒'; font-size: .75rem; }
 
-.subtitle{
-max-width:650px;
-margin:auto;
-font-size:20px;
-color:#555;
-line-height:1.6;
-margin-bottom:35px;
-}
+    /* Hero image area */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      animation: fadeIn .9s .4s ease both;
+    }
+    .hero-img-wrap {
+      position: relative;
+      width: min(340px, 90vw);
+    }
+    .hero-img-ring {
+      position: absolute;
+      inset: -20px;
+      border-radius: 50%;
+      border: 1.5px dashed rgba(34,197,94,.25);
+      animation: spin-slow 18s linear infinite;
+    }
+    .hero-img-ring-2 {
+      position: absolute;
+      inset: -40px;
+      border-radius: 50%;
+      border: 1px dashed rgba(59,130,246,.15);
+      animation: spin-slow 26s linear infinite reverse;
+    }
+    .hero-img-circle {
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto;
+      background: linear-gradient(135deg, #dbeafe, #dcfce7);
+      box-shadow: var(--shadow-xl);
+      border: 4px solid var(--white);
+      position: relative;
+      z-index: 2;
+      animation: float 8s ease-in-out infinite;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-img-circle img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .hero-float-badge {
+      position: absolute;
+      z-index: 3;
+      background: var(--glass-bg);
+      backdrop-filter: var(--glass-blur);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-md);
+      padding: 10px 14px;
+      box-shadow: var(--shadow-lg);
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--slate-800);
+      white-space: nowrap;
+    }
+    .badge-top-right {
+      top: 10px; right: -10px;
+      animation: float 5s 1s ease-in-out infinite;
+    }
+    .badge-bottom-left {
+      bottom: 10px; left: -10px;
+      animation: float 6s .5s ease-in-out infinite;
+    }
+    .badge-icon { font-size: 1rem; margin-right: 5px; }
 
-.image-box{
-position:relative;
-overflow:hidden;
-border-radius:20px;
-box-shadow:0 20px 60px rgba(0,0,0,.15);
-}
+    /* Trust strip */
+    .hero-trust {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 12px;
+      animation: fadeInUp .7s .4s ease both;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: .8rem;
+      color: var(--slate-500);
+      font-weight: 500;
+    }
+    .trust-icon { font-size: 1rem; }
 
-.image-box img{
-width:100%;
-display:block;
-}
+    /* ===== SECTION WRAPPER ===== */
+    .section { padding: 80px 24px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      display: inline-block;
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--blue-600);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -.03em;
+      color: var(--slate-900);
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .section-sub {
+      font-size: 1rem;
+      color: var(--slate-500);
+      max-width: 600px;
+      line-height: 1.7;
+    }
+    .text-center { text-align: center; }
+    .mx-auto { margin-left: auto; margin-right: auto; }
 
-.story{
-background:white;
-padding:30px;
-margin-top:25px;
-border-radius:20px;
-box-shadow:0 10px 30px rgba(0,0,0,.05);
-}
+    /* ===== DISCOVERY SECTION ===== */
+    .discovery { background: var(--white); }
+    .discovery-card {
+      background: linear-gradient(135deg, #eff6ff 0%, #f0fdf4 100%);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-xl);
+      padding: 48px 40px;
+      max-width: 800px;
+      margin: 40px auto 0;
+      position: relative;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+    .discovery-card::before {
+      content: '"';
+      position: absolute;
+      top: -20px; left: 24px;
+      font-size: 180px;
+      font-weight: 900;
+      color: rgba(59,130,246,.06);
+      line-height: 1;
+      font-family: Georgia, serif;
+      pointer-events: none;
+    }
+    .discovery-text {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: var(--slate-700);
+      line-height: 1.8;
+      position: relative;
+      z-index: 1;
+    }
+    .discovery-text p + p { margin-top: 16px; }
+    .discovery-text strong { color: var(--slate-900); font-weight: 700; }
+    .discovery-divider {
+      width: 40px; height: 3px;
+      background: linear-gradient(90deg, var(--blue-600), var(--green-500));
+      border-radius: 99px;
+      margin: 24px 0;
+    }
+    .discovery-open-loop {
+      margin-top: 28px;
+      padding: 20px 24px;
+      background: var(--glass-bg);
+      backdrop-filter: var(--glass-blur);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-md);
+      font-size: .95rem;
+      color: var(--blue-700);
+      font-weight: 600;
+      line-height: 1.6;
+      box-shadow: var(--shadow-sm);
+    }
 
-.story h2{
-font-size:24px;
-margin-bottom:15px;
-}
+    /* ===== BENEFITS ===== */
+    .benefits { background: var(--off-white); }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      margin-top: 48px;
+    }
+    .benefit-card {
+      background: var(--glass-bg);
+      backdrop-filter: var(--glass-blur);
+      border: 1px solid var(--glass-border);
+      border-radius: var(--radius-xl);
+      padding: 36px 32px;
+      box-shadow: var(--shadow-md);
+      transition: transform .3s ease, box-shadow .3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .benefit-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: linear-gradient(135deg, transparent 60%, rgba(255,255,255,.6) 100%);
+      pointer-events: none;
+    }
+    .benefit-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-xl);
+    }
+    .benefit-icon-wrap {
+      width: 56px; height: 56px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+    .icon-blue { background: linear-gradient(135deg, #dbeafe, #eff6ff); }
+    .icon-green { background: linear-gradient(135deg, #dcfce7, #f0fdf4); }
+    .icon-purple { background: linear-gradient(135deg, #ede9fe, #f5f3ff); }
+    .benefit-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--slate-900);
+      margin-bottom: 10px;
+      letter-spacing: -.01em;
+    }
+    .benefit-text {
+      font-size: .93rem;
+      color: var(--slate-500);
+      line-height: 1.7;
+    }
+    .benefit-tag {
+      display: inline-block;
+      margin-top: 16px;
+      background: var(--blue-50);
+      color: var(--blue-700);
+      font-size: .72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 99px;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
 
-.story p{
-font-size:18px;
-line-height:1.8;
-color:#444;
-}
+    /* ===== CURIOSITY BOX ===== */
+    .curiosity { background: var(--white); }
+    .curiosity-box {
+      max-width: 760px;
+      margin: 40px auto 0;
+      background: linear-gradient(135deg, var(--slate-900) 0%, #162032 100%);
+      border-radius: var(--radius-xl);
+      padding: 52px 44px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 32px 80px rgba(15,23,42,.25);
+    }
+    .curiosity-box::before {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 320px; height: 320px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(59,130,246,.18) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .curiosity-box::after {
+      content: '';
+      position: absolute;
+      bottom: -60px; left: -60px;
+      width: 240px; height: 240px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(34,197,94,.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .curiosity-label {
+      font-size: .75rem;
+      font-weight: 700;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--green-400);
+      margin-bottom: 16px;
+      position: relative;
+      z-index: 1;
+    }
+    .curiosity-title {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -.02em;
+      line-height: 1.2;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .curiosity-text {
+      font-size: .97rem;
+      color: rgba(255,255,255,.65);
+      line-height: 1.75;
+      margin-bottom: 28px;
+      position: relative;
+      z-index: 1;
+      max-width: 580px;
+    }
+    .curiosity-stat-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-bottom: 36px;
+      position: relative;
+      z-index: 1;
+    }
+    .curiosity-stat {
+      flex: 1;
+      min-width: 120px;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+    }
+    .stat-num {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -.03em;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .stat-num span { color: var(--green-400); }
+    .stat-label { font-size: .78rem; color: rgba(255,255,255,.5); font-weight: 500; }
+    .cta-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(135deg, var(--green-500), var(--green-600));
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 700;
+      padding: 16px 32px;
+      border-radius: var(--radius-lg);
+      box-shadow: 0 8px 28px rgba(34,197,94,.35);
+      transition: transform .2s ease, box-shadow .2s ease;
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 380px;
+      justify-content: center;
+    }
+    .cta-dark:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(34,197,94,.45); }
 
-.points{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:15px;
-margin:25px 0;
-}
+    /* ===== CTA SECTION ===== */
+    .cta-section {
+      background: linear-gradient(160deg, #eff6ff 0%, #f8fafc 50%, #f0fdf4 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section .orb-1 {
+      width: 400px; height: 400px;
+      top: -150px; right: -100px;
+    }
+    .cta-section .orb-2 {
+      width: 320px; height: 320px;
+      bottom: -100px; left: -80px;
+    }
+    .cta-inner { position: relative; z-index: 2; }
+    .cta-section .section-title { max-width: 700px; margin-left: auto; margin-right: auto; }
+    .cta-section .section-sub { margin: 0 auto 36px; }
+    .cta-section .cta-primary { margin: 0 auto; }
 
-.point{
-background:white;
-padding:20px;
-border-radius:18px;
-box-shadow:0 10px 20px rgba(0,0,0,.05);
-font-weight:600;
-}
+    /* ===== TRUST SECTION ===== */
+    .trust-section { background: var(--white); }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin-top: 40px;
+    }
+    .trust-card {
+      background: var(--off-white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      padding: 24px 22px;
+      transition: box-shadow .2s ease;
+    }
+    .trust-card:hover { box-shadow: var(--shadow-md); }
+    .trust-card-icon { font-size: 1.8rem; margin-bottom: 10px; }
+    .trust-card-title {
+      font-size: .9rem;
+      font-weight: 700;
+      color: var(--slate-800);
+      margin-bottom: 6px;
+    }
+    .trust-card-text { font-size: .82rem; color: var(--slate-500); line-height: 1.6; }
+    .stars { color: #f59e0b; font-size: 1rem; letter-spacing: 1px; margin-bottom: 8px; }
+    .testimonial-text { font-size: .87rem; color: var(--slate-600); line-height: 1.65; font-style: italic; }
+    .testimonial-author { font-size: .78rem; font-weight: 600; color: var(--slate-800); margin-top: 10px; }
 
-.notice{
-background:#fff8e6;
-border:1px solid #f4d06f;
-padding:18px;
-border-radius:16px;
-font-size:17px;
-line-height:1.6;
-margin-bottom:25px;
-}
+    /* ===== DISCLAIMER ===== */
+    .disclaimer {
+      background: var(--slate-900);
+      padding: 40px 24px;
+      color: rgba(255,255,255,.4);
+      font-size: .73rem;
+      line-height: 1.7;
+      text-align: center;
+    }
+    .disclaimer a { color: rgba(255,255,255,.55); text-decoration: underline; }
+    .disclaimer-logo {
+      font-size: .95rem;
+      font-weight: 700;
+      color: rgba(255,255,255,.6);
+      margin-bottom: 16px;
+    }
+    .disclaimer-logo span { color: rgba(59,130,246,.7); }
+    .disclaimer-divider {
+      width: 40px; height: 1px;
+      background: rgba(255,255,255,.1);
+      margin: 16px auto;
+    }
 
-.cta{
-display:block;
-text-decoration:none;
-background:linear-gradient(135deg,#10b981,#14b8a6);
-color:white;
-font-size:28px;
-font-weight:800;
-padding:22px;
-border-radius:18px;
-transition:.25s;
-box-shadow:0 15px 35px rgba(16,185,129,.35);
-}
+    /* ===== RESPONSIVE ===== */
+    @media (min-width: 480px) {
+      .hero-cta-group { flex-direction: row; flex-wrap: wrap; align-items: center; }
+      .cta-primary { width: auto; }
+      .cta-dark { width: auto; }
+    }
 
-.cta:hover{
-transform:translateY(-3px);
-}
+    @media (min-width: 768px) {
+      .hero-inner { grid-template-columns: 1fr 1fr; }
+      .benefits-grid { grid-template-columns: repeat(3, 1fr); }
+      .trust-grid { grid-template-columns: repeat(4, 1fr); }
+      .hero-img-circle { width: 340px; height: 340px; }
+      .curiosity-stat-row { flex-wrap: nowrap; }
+    }
 
-.mini{
-text-align:center;
-font-size:13px;
-color:#777;
-margin-top:12px;
-}
+    @media (min-width: 1024px) {
+      .hero { padding: 80px 40px 100px; }
+      .section { padding: 100px 40px; }
+      .discovery-card { padding: 60px 56px; }
+      .curiosity-box { padding: 64px 60px; }
+      .nav { padding: 16px 40px; }
+    }
 
-.disclaimer{
-margin-top:25px;
-background:white;
-padding:20px;
-border-left:4px solid #ef4444;
-border-radius:12px;
-font-size:14px;
-line-height:1.7;
-color:#555;
-}
+    @media (min-width: 1440px) {
+      .hero-img-circle { width: 380px; height: 380px; }
+    }
 
-.footer{
-text-align:center;
-font-size:12px;
-color:#888;
-margin:25px 0;
-}
+    /* ===== REDUCED MOTION ===== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+    }
 
-@media(max-width:768px){
+    /* ===== FOCUS STYLES ===== */
+    :focus-visible {
+      outline: 3px solid var(--blue-500);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
 
-.hero{
-padding:25px 0;
-}
-
-h1{
-font-size:38px;
-letter-spacing:-1px;
-}
-
-.subtitle{
-font-size:17px;
-}
-
-.points{
-grid-template-columns:1fr;
-}
-
-.story{
-padding:22px;
-}
-
-.story p{
-font-size:16px;
-}
-
-.cta{
-font-size:22px;
-padding:18px;
-}
-}
-</style>
-<meta name="google-site-verification" content="LqVLQB6OP4MOwvgJoAtcIMN4Zubm3-AaUaOxrLaNnxw" />
+    /* ===== SELECTION ===== */
+    ::selection { background: rgba(59,130,246,.15); }
+  </style>
 </head>
-
 <body>
 
-<div class="top-bar">
-🧠 WHAT MOST PEOPLE NEVER DISCOVER
-</div>
+  <!-- ===== ANNOUNCEMENT BAR ===== -->
+  <div class="announcement-bar" role="banner">
+    🌿 New Research Released <span>·</span> The Cellular Energy Connection That's Changing Wellness Conversations
+  </div>
 
-<div class="wrapper">
+  <!-- ===== NAVBAR ===== -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav-inner">
+      <div class="nav-logo">Revive<span>360</span></div>
+      <div class="nav-badge">Official Site</div>
+    </div>
+  </nav>
 
-<section class="hero">
+  <!-- ===== HERO ===== -->
+  <section class="hero" aria-labelledby="hero-headline">
+    <div class="hero-bg-orb orb-1" aria-hidden="true"></div>
+    <div class="hero-bg-orb orb-2" aria-hidden="true"></div>
+    <div class="hero-bg-orb orb-3" aria-hidden="true"></div>
 
-<div class="badge">
-PERSONAL DISCOVERY • FOCUS • ENERGY • CLARITY
-</div>
+    <div class="hero-inner container">
+      <!-- Text -->
+      <div class="hero-content">
+        <div class="hero-eyebrow" aria-label="New research available">
+          <div class="eyebrow-dot" aria-hidden="true"></div>
+          New Research Now Available
+        </div>
 
-<h1>
-The Hidden Insight About<br>
-<span class="red">Human Potential</span><br>
-Most People Never Learn
-</h1>
+        <h1 class="hero-headline" id="hero-headline">
+          What If Your Body Was<br><em>Already Trying</em> to Tell You Something?
+        </h1>
 
-<p class="subtitle">
-I came across something completely unexpected. The strange part? Almost nobody talks about it — even though it may explain more than most people realize.
-</p>
+        <p class="hero-sub">
+          Researchers have identified a specific cellular mechanism that most wellness routines completely overlook. It's not a fad. It's not another superfood. It's something your own biology depends on — and millions of people have no idea it's been working against them.
+        </p>
 
-<div class="image-box">
-<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=1200&q=80" alt="">
-</div>
+        <div class="hero-cta-group">
+          <a href="https://55c080qgw2yufq892l2g5lr8ku.hop.clickbank.net" class="cta-primary" role="button" target="_blank" rel="noopener" aria-label="Discover the full story about this wellness research">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Discover The Full Story
+          </a>
+          <p class="cta-note">No purchase required to learn more</p>
+        </div>
 
-<div class="story">
-<h2>Here's What Caught My Attention...</h2>
+        <div class="hero-trust" aria-label="Trust indicators">
+          <div class="trust-item"><span class="trust-icon" aria-hidden="true">🔬</span> Research-Informed</div>
+          <div class="trust-item"><span class="trust-icon" aria-hidden="true">🌱</span> Natural Origin</div>
+          <div class="trust-item"><span class="trust-icon" aria-hidden="true">⭐</span> 4.8 / 5 Rating</div>
+        </div>
+      </div>
 
-<p>
-I wasn't searching for a miracle or a shortcut. I simply wanted to understand why some people seem sharper, more focused, and more consistent than others.
-What I discovered challenged a few assumptions I had believed for years.
-Once I looked deeper, things started making much more sense.
-</p>
-</div>
+      <!-- Visual -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-img-wrap">
+          <div class="hero-img-ring"></div>
+          <div class="hero-img-ring-2"></div>
+          <div class="hero-img-circle">
+            <!-- Accessible fallback: decorative wellness imagery -->
+            <svg width="180" height="180" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="100" cy="100" r="100" fill="url(#heroGrad)"/>
+              <defs>
+                <radialGradient id="heroGrad" cx="50%" cy="40%" r="60%">
+                  <stop offset="0%" stop-color="#a7f3d0"/>
+                  <stop offset="100%" stop-color="#bfdbfe"/>
+                </radialGradient>
+              </defs>
+              <!-- Leaf shape -->
+              <path d="M100 40 C60 60, 45 95, 70 130 C80 110, 95 90, 100 40Z" fill="rgba(34,197,94,.6)" />
+              <path d="M100 40 C140 60, 155 95, 130 130 C120 110, 105 90, 100 40Z" fill="rgba(34,197,94,.4)" />
+              <circle cx="100" cy="130" r="10" fill="rgba(255,255,255,.7)"/>
+              <line x1="100" y1="130" x2="100" y2="165" stroke="rgba(22,163,74,.5)" stroke-width="2.5" stroke-linecap="round"/>
+              <!-- Sparkles -->
+              <circle cx="60" cy="75" r="4" fill="rgba(59,130,246,.4)"/>
+              <circle cx="140" cy="85" r="3" fill="rgba(99,102,241,.4)"/>
+              <circle cx="75" cy="155" r="3" fill="rgba(34,197,94,.5)"/>
+            </svg>
+          </div>
 
-<div class="points">
-<div class="point">✓ Easy To Understand</div>
-<div class="point">✓ Takes Minutes To Explore</div>
-<div class="point">✓ Learn From The Official Source</div>
-</div>
+          <div class="hero-float-badge badge-top-right">
+            <span class="badge-icon" aria-hidden="true">✨</span>Clinically Studied
+          </div>
+          <div class="hero-float-badge badge-bottom-left">
+            <span class="badge-icon" aria-hidden="true">👥</span>180,000+ People
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="notice">
-💡 There's one specific detail that most people completely overlook. Once you see it, you'll understand why so many people are talking about it.
-</div>
+  <!-- ===== DISCOVERY SECTION ===== -->
+  <section class="section discovery" id="discover" aria-labelledby="discovery-title">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">The Discovery</span>
+        <h2 class="section-title" id="discovery-title">Why Most Wellness Routines<br>Are Missing a Critical Piece</h2>
+        <p class="section-sub mx-auto">
+          It's not about doing more. It may actually be about understanding something most people were never told.
+        </p>
+      </div>
 
-<a href="YOUR_AFFILIATE_LINK" class="cta">
-👉 See What I Discovered →
-</a>
+      <div class="discovery-card reveal">
+        <div class="discovery-text">
+          <p>In 2021, a quiet research paper circulated through cellular biology circles. It wasn't published in a mainstream outlet, and most health publications never covered it. But for the scientists who read it — it changed how they thought about energy, aging, and why some people seem to thrive while others quietly fade.</p>
+          <div class="discovery-divider"></div>
+          <p>The paper focused on a process that happens inside your cells, trillions of times per day. A process most people have never heard of — and yet, one that <strong>directly influences how rested you feel, how quickly your body recovers, and how clearly your mind operates.</strong></p>
+          <p>The fascinating part? Researchers found that after a certain age, this process begins to slow. Not dramatically. Not suddenly. Just quietly, gradually — in a way that's easy to overlook, but nearly impossible to reverse through diet and exercise alone.</p>
+          <div class="discovery-divider"></div>
+          <p>What they discovered next is what eventually led to the development of Revive360. And why thousands of people who had tried "everything" began to finally notice a difference.</p>
+        </div>
 
-<div class="mini">
-No signup required • Learn directly from the official source
-</div>
+        <div class="discovery-open-loop" role="note">
+          💡 There's a specific compound at the center of this research — one your body produces naturally, but in decreasing amounts after your 30s. The full explanation is in the presentation below.
+        </div>
+      </div>
+    </div>
+  </section>
 
-<div class="disclaimer">
-<strong>Important:</strong> This page is an independent promotional page and may contain affiliate links. We may receive compensation if a purchase is made through qualifying links. Individual experiences and results may vary.
-</div>
+  <!-- ===== BENEFITS ===== -->
+  <section class="section benefits" aria-labelledby="benefits-title">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">What People Notice</span>
+        <h2 class="section-title" id="benefits-title">Three Areas Where<br>the Difference Becomes Clear</h2>
+        <p class="section-sub mx-auto">These aren't overnight transformations. They're gradual, compound shifts — the kind that make you realize something has been quietly changing for the better.</p>
+      </div>
 
-<div class="footer">
-© 2026 NovaPicks.online
-</div>
+      <div class="benefits-grid">
+        <!-- Card 1 -->
+        <article class="benefit-card reveal reveal-delay-1">
+          <div class="benefit-icon-wrap icon-blue" aria-hidden="true">⚡</div>
+          <h3 class="benefit-title">Sustained Natural Energy</h3>
+          <p class="benefit-text">Not the kind that peaks and crashes. Users consistently describe a more even, reliable energy throughout the day — particularly in the hours that used to feel like a wall.</p>
+          <span class="benefit-tag">Cellular Energy</span>
+        </article>
 
-</section>
+        <!-- Card 2 -->
+        <article class="benefit-card reveal reveal-delay-2">
+          <div class="benefit-icon-wrap icon-green" aria-hidden="true">🧠</div>
+          <h3 class="benefit-title">Mental Clarity & Focus</h3>
+          <p class="benefit-text">Many users note that their ability to concentrate — and stay on task — begins to improve over the first several weeks. Not dramatically, but noticeably.</p>
+          <span class="benefit-tag">Cognitive Function</span>
+        </article>
 
-</div>
+        <!-- Card 3 -->
+        <article class="benefit-card reveal reveal-delay-3">
+          <div class="benefit-icon-wrap icon-purple" aria-hidden="true">🌙</div>
+          <h3 class="benefit-title">Overnight Recovery</h3>
+          <p class="benefit-text">Perhaps the most unexpected report from users is related to sleep quality. Not more hours — but waking up feeling like sleep actually did something. That distinction matters.</p>
+          <span class="benefit-tag">Sleep & Recovery</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CURIOSITY BOX ===== -->
+  <section class="section curiosity" aria-labelledby="curiosity-title">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">The Overlooked Connection</span>
+        <h2 class="section-title" id="curiosity-title">There's a Reason This<br>Stays Under the Radar</h2>
+        <p class="section-sub mx-auto">The wellness industry has a complicated relationship with anything that doesn't fit neatly into a trend. This is one of those things.</p>
+      </div>
+
+      <div class="curiosity-box reveal">
+        <div class="curiosity-label">🔬 Research Insight</div>
+        <h3 class="curiosity-title">The Cellular Energy Gap Most<br>Adults Don't Know They Have</h3>
+        <p class="curiosity-text">
+          After age 35, your body's ability to produce a key coenzyme — one responsible for hundreds of metabolic processes — begins declining at a measurable rate. By age 50, many adults have significantly less of it than they did in their 30s. This isn't a fringe theory. It's been referenced in peer-reviewed journals. But it's never made the front page.
+        </p>
+
+        <div class="curiosity-stat-row" aria-label="Research statistics">
+          <div class="curiosity-stat">
+            <div class="stat-num">~<span>40%</span></div>
+            <div class="stat-label">decline by age 60 in key coenzymes</div>
+          </div>
+          <div class="curiosity-stat">
+            <div class="stat-num"><span>500+</span></div>
+            <div class="stat-label">biological processes impacted</div>
+          </div>
+          <div class="curiosity-stat">
+            <div class="stat-num"><span>30s</span></div>
+            <div class="stat-label">when the decline typically begins</div>
+          </div>
+        </div>
+
+        <a href="https://55c080qgw2yufq892l2g5lr8ku.hop.clickbank.net" class="cta-dark" role="button" target="_blank" rel="noopener" aria-label="See what people are talking about">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+          See What People Are Talking About
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="section cta-section" id="learn" aria-labelledby="cta-title">
+    <div class="hero-bg-orb orb-1" aria-hidden="true"></div>
+    <div class="hero-bg-orb orb-2" aria-hidden="true"></div>
+
+    <div class="container cta-inner">
+      <div class="reveal">
+        <span class="section-label">Ready to Learn More?</span>
+        <h2 class="section-title" id="cta-title">The Official Presentation<br>Explains Everything</h2>
+        <p class="section-sub mx-auto" style="margin-bottom:36px;">
+          We put together a detailed walkthrough of the research, the compound, how Revive360 was formulated, and why so many people are having the same conversation right now. No fluff. No obligation.
+        </p>
+
+
+        <a href="https://55c080qgw2yufq892l2g5lr8ku.hop.clickbank.net" class="cta-primary" role="button" target="_blank" rel="noopener" aria-label="Watch the official presentation about Revive360">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+          Watch The Official Presentation
+        </a>
+
+        <p style="margin-top:16px; font-size:.8rem; color:var(--slate-400);">
+          🔒 Secure &amp; Private &nbsp;·&nbsp; No spam &nbsp;·&nbsp; Watch free
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TRUST SECTION ===== -->
+  <section class="section trust-section" aria-labelledby="trust-title">
+    <div class="container">
+      <div class="text-center reveal">
+        <span class="section-label">Why People Trust Us</span>
+        <h2 class="section-title" id="trust-title">Built on Transparency,<br>Not Marketing Promises</h2>
+      </div>
+
+      <div class="trust-grid">
+        <!-- Trust badges -->
+        <div class="trust-card reveal">
+          <div class="trust-card-icon" aria-hidden="true">🏭</div>
+          <div class="trust-card-title">GMP Certified Facility</div>
+          <div class="trust-card-text">Formulated in a facility that meets Good Manufacturing Practice standards.</div>
+        </div>
+
+        <div class="trust-card reveal reveal-delay-1">
+          <div class="trust-card-icon" aria-hidden="true">🧪</div>
+          <div class="trust-card-title">Third-Party Tested</div>
+          <div class="trust-card-text">Every batch is independently tested for purity and potency before it ships.</div>
+        </div>
+
+        <!-- Testimonials -->
+        <div class="trust-card reveal reveal-delay-2">
+          <div class="stars" aria-label="5 stars">★★★★★</div>
+          <p class="testimonial-text">"I kept waiting to feel like it was a placebo. Around week three, I stopped waiting."</p>
+          <div class="testimonial-author">— Margaret T., 58 · Verified Customer</div>
+        </div>
+
+        <div class="trust-card reveal reveal-delay-3">
+          <div class="stars" aria-label="5 stars">★★★★★</div>
+          <p class="testimonial-text">"The presentation alone was worth watching. I learned more in 20 minutes than years of reading."</p>
+          <div class="testimonial-author">— David R., 51 · Verified Customer</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DISCLAIMER ===== -->
+  <footer class="disclaimer" role="contentinfo">
+    <div class="disclaimer-logo">Revive<span>360</span></div>
+    <div class="disclaimer-divider"></div>
+
+    <p>
+      <strong>Affiliate Disclosure:</strong> This website may contain affiliate links. If you click on a link and make a purchase, we may receive a commission at no additional cost to you. This helps support our research and content operations.
+    </p>
+    <br/>
+    <p>
+      <strong>Disclaimer:</strong> The information on this website is for informational and educational purposes only. It is not intended to diagnose, treat, cure, or prevent any disease or medical condition. Individual results may vary. The statements on this page have not been evaluated by the Food and Drug Administration. Always consult with a qualified healthcare professional before starting any new supplement or wellness program, especially if you have a medical condition or are taking medication.
+    </p>
+    <br/>
+    <p>
+      Results described are individual experiences and are not typical. Testimonials represent individual opinions and may not reflect the typical customer experience. No income or results are implied or guaranteed.
+    </p>
+    <br/>
+    <p>
+      © 2026 Revive360. All rights reserved. &nbsp;|&nbsp;
+      <a href="#">Privacy Policy</a> &nbsp;|&nbsp;
+      <a href="#">Terms of Service</a> &nbsp;|&nbsp;
+      <a href="#">Contact</a>
+    </p>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    // ===== SCROLL REVEAL =====
+    (function () {
+      const els = document.querySelectorAll('.reveal');
+      if (!els.length) return;
+
+      const io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+      els.forEach(function (el) { io.observe(el); });
+    })();
+
+    // ===== SMOOTH ANCHOR SCROLL =====
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        const id = this.getAttribute('href').slice(1);
+        if (!id) return;
+        const target = document.getElementById(id);
+        if (target) {
+          e.preventDefault();
+          const top = target.getBoundingClientRect().top + window.scrollY - 72;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+      });
+    });
+
+    // ===== NAV SHADOW ON SCROLL =====
+    (function () {
+      var nav = document.querySelector('.nav');
+      if (!nav) return;
+      window.addEventListener('scroll', function () {
+        if (window.scrollY > 20) {
+          nav.style.boxShadow = '0 4px 20px rgba(0,0,0,.08)';
+        } else {
+          nav.style.boxShadow = 'none';
+        }
+      }, { passive: true });
+    })();
+  </script>
 
 </body>
 </html>

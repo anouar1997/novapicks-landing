@@ -768,6 +768,178 @@
 
     /* ===== SELECTION ===== */
     ::selection { background: rgba(59,130,246,.15); }
+
+    /* ===== VIDEO PREVIEW SECTION ===== */
+    .video-section {
+      background: linear-gradient(180deg, #f0fdf4 0%, #f8fafc 100%);
+      padding: 0 24px 80px;
+    }
+    .video-container {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .video-thumb-wrap {
+      position: relative;
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      cursor: pointer;
+      display: block;
+      box-shadow: 0 20px 60px rgba(0,0,0,.18), 0 6px 20px rgba(0,0,0,.10);
+      transition: transform .4s cubic-bezier(.22,.68,0,1.2), box-shadow .4s ease;
+      aspect-ratio: 16 / 9;
+      background: #0f172a;
+      text-decoration: none;
+    }
+    .video-thumb-wrap:hover {
+      transform: scale(1.018);
+      box-shadow: 0 28px 80px rgba(0,0,0,.22), 0 10px 30px rgba(0,0,0,.14);
+    }
+    .video-thumb-wrap:hover .vt-img {
+      transform: scale(1.06);
+      filter: brightness(.55);
+    }
+    .video-thumb-wrap:hover .play-btn-outer {
+      transform: translate(-50%, -50%) scale(1.1);
+    }
+    .vt-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform .5s ease, filter .4s ease;
+      filter: brightness(.62);
+      position: absolute;
+      inset: 0;
+    }
+    /* SVG fallback background when no real image */
+    .vt-img-fallback {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+    /* Cinematic gradient overlays */
+    .vt-overlay-top {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,
+        rgba(10,15,30,.55) 0%,
+        transparent 35%,
+        transparent 55%,
+        rgba(5,12,25,.72) 100%);
+      z-index: 2;
+      pointer-events: none;
+    }
+    /* Play button */
+    .play-btn-outer {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 4;
+      transition: transform .3s cubic-bezier(.22,.68,0,1.2);
+    }
+    @keyframes play-pulse {
+      0%   { box-shadow: 0 0 0 0 rgba(255,255,255,.35), 0 8px 32px rgba(0,0,0,.4); }
+      65%  { box-shadow: 0 0 0 18px rgba(255,255,255,.00), 0 8px 32px rgba(0,0,0,.4); }
+      100% { box-shadow: 0 0 0 0 rgba(255,255,255,.00), 0 8px 32px rgba(0,0,0,.4); }
+    }
+    .play-btn {
+      width: 76px;
+      height: 76px;
+      border-radius: 50%;
+      background: rgba(255,255,255,.95);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: play-pulse 2.2s ease-out infinite;
+      transition: background .2s ease;
+    }
+    .video-thumb-wrap:hover .play-btn {
+      background: #fff;
+      animation-play-state: paused;
+    }
+    .play-btn svg {
+      margin-left: 5px; /* optical center for triangle */
+    }
+    /* Duration badge */
+    .vt-duration {
+      position: absolute;
+      bottom: 16px;
+      right: 18px;
+      z-index: 5;
+      background: rgba(0,0,0,.72);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      font-size: .8rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 6px;
+      letter-spacing: .04em;
+      font-variant-numeric: tabular-nums;
+    }
+    /* Top-left live/official badge */
+    .vt-badge {
+      position: absolute;
+      top: 16px;
+      left: 18px;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(0,0,0,.60);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      font-size: .75rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 6px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .vt-badge-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: #ef4444;
+      animation: play-pulse 1.6s ease-out infinite;
+      flex-shrink: 0;
+    }
+    /* Progress bar (fake) */
+    .vt-progress {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: rgba(255,255,255,.15);
+      z-index: 5;
+    }
+    .vt-progress-fill {
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--green-400), var(--blue-500));
+      border-radius: 0 2px 2px 0;
+      transition: width .3s ease;
+    }
+    .video-thumb-wrap:hover .vt-progress-fill { width: 28%; }
+    /* Caption below */
+    .video-caption {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 18px;
+      font-size: .93rem;
+      font-weight: 600;
+      color: var(--slate-600);
+      letter-spacing: -.01em;
+    }
+    .video-caption svg { color: var(--blue-600); flex-shrink: 0; }
+    .video-caption span { color: var(--slate-400); font-weight: 400; }
+    /* Mobile */
+    @media (max-width: 480px) {
+      .play-btn { width: 60px; height: 60px; }
+      .play-btn svg { width: 22px; height: 22px; }
+      .vt-duration { font-size: .72rem; bottom: 10px; right: 12px; }
+      .vt-badge { font-size: .68rem; top: 10px; left: 12px; }
+    }
   </style>
 </head>
 <body>
@@ -857,6 +1029,145 @@
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- ===== VIDEO PREVIEW SECTION ===== -->
+  <section class="video-section" aria-labelledby="video-caption-label">
+    <div class="video-container reveal">
+
+      <a href="https://55c080qgw2yufq892l2g5lr8ku.hop.clickbank.net"
+         class="video-thumb-wrap"
+         target="_blank"
+         rel="noopener"
+         role="link"
+         aria-label="Watch the Official Presentation – 12 minutes">
+
+        <!-- Background image: professional wellness / science lab aesthetic -->
+        <svg class="vt-img-fallback" viewBox="0 0 860 483" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs>
+            <linearGradient id="vbg1" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#0a1628"/>
+              <stop offset="55%" stop-color="#0d2140"/>
+              <stop offset="100%" stop-color="#071520"/>
+            </linearGradient>
+            <linearGradient id="vbg2" x1="0%" y1="100%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="rgba(34,197,94,.18)"/>
+              <stop offset="100%" stop-color="rgba(59,130,246,.12)"/>
+            </linearGradient>
+            <radialGradient id="vglow1" cx="70%" cy="40%" r="45%">
+              <stop offset="0%" stop-color="rgba(59,130,246,.22)"/>
+              <stop offset="100%" stop-color="transparent"/>
+            </radialGradient>
+            <radialGradient id="vglow2" cx="20%" cy="70%" r="38%">
+              <stop offset="0%" stop-color="rgba(34,197,94,.15)"/>
+              <stop offset="100%" stop-color="transparent"/>
+            </radialGradient>
+            <filter id="blur4"><feGaussianBlur stdDeviation="4"/></filter>
+            <filter id="blur2"><feGaussianBlur stdDeviation="2"/></filter>
+          </defs>
+          <!-- Base dark background -->
+          <rect width="860" height="483" fill="url(#vbg1)"/>
+          <rect width="860" height="483" fill="url(#vbg2)"/>
+          <rect width="860" height="483" fill="url(#vglow1)"/>
+          <rect width="860" height="483" fill="url(#vglow2)"/>
+          <!-- Subtle grid lines -->
+          <g stroke="rgba(255,255,255,.04)" stroke-width="1">
+            <line x1="0" y1="80" x2="860" y2="80"/>
+            <line x1="0" y1="160" x2="860" y2="160"/>
+            <line x1="0" y1="240" x2="860" y2="240"/>
+            <line x1="0" y1="320" x2="860" y2="320"/>
+            <line x1="0" y1="400" x2="860" y2="400"/>
+            <line x1="143" y1="0" x2="143" y2="483"/>
+            <line x1="286" y1="0" x2="286" y2="483"/>
+            <line x1="430" y1="0" x2="430" y2="483"/>
+            <line x1="573" y1="0" x2="573" y2="483"/>
+            <line x1="716" y1="0" x2="716" y2="483"/>
+          </g>
+          <!-- Large molecule / cell illustration -->
+          <g transform="translate(620,200)" opacity=".45" filter="url(#blur2)">
+            <circle cx="0" cy="0" r="90" fill="none" stroke="rgba(59,130,246,.5)" stroke-width="1.5" stroke-dasharray="6 4"/>
+            <circle cx="0" cy="0" r="55" fill="none" stroke="rgba(34,197,94,.4)" stroke-width="1" stroke-dasharray="4 6"/>
+            <circle cx="0" cy="0" r="24" fill="rgba(59,130,246,.25)"/>
+            <!-- Orbit nodes -->
+            <circle cx="90" cy="0" r="7" fill="rgba(59,130,246,.7)"/>
+            <circle cx="-90" cy="0" r="5" fill="rgba(34,197,94,.6)"/>
+            <circle cx="0" cy="-90" r="6" fill="rgba(99,102,241,.6)"/>
+            <circle cx="44" cy="-75" r="4" fill="rgba(34,197,94,.5)"/>
+            <circle cx="-44" cy="75" r="4" fill="rgba(59,130,246,.5)"/>
+            <!-- Lines to nodes -->
+            <line x1="0" y1="0" x2="90" y2="0" stroke="rgba(59,130,246,.35)" stroke-width="1"/>
+            <line x1="0" y1="0" x2="-90" y2="0" stroke="rgba(34,197,94,.3)" stroke-width="1"/>
+            <line x1="0" y1="0" x2="0" y2="-90" stroke="rgba(99,102,241,.3)" stroke-width="1"/>
+            <line x1="0" y1="0" x2="44" y2="-75" stroke="rgba(34,197,94,.25)" stroke-width="1"/>
+          </g>
+          <!-- Secondary smaller molecule left -->
+          <g transform="translate(130,290)" opacity=".3" filter="url(#blur4)">
+            <circle cx="0" cy="0" r="55" fill="none" stroke="rgba(34,197,94,.45)" stroke-width="1.2" stroke-dasharray="5 5"/>
+            <circle cx="0" cy="0" r="18" fill="rgba(34,197,94,.2)"/>
+            <circle cx="55" cy="0" r="5" fill="rgba(34,197,94,.5)"/>
+            <circle cx="-40" cy="-38" r="4" fill="rgba(59,130,246,.5)"/>
+          </g>
+          <!-- Floating data points / particles -->
+          <g opacity=".5">
+            <circle cx="200" cy="120" r="2.5" fill="rgba(59,130,246,.8)"/>
+            <circle cx="340" cy="80" r="2" fill="rgba(34,197,94,.7)"/>
+            <circle cx="480" cy="150" r="3" fill="rgba(255,255,255,.4)"/>
+            <circle cx="160" cy="380" r="2" fill="rgba(34,197,94,.6)"/>
+            <circle cx="700" cy="380" r="2.5" fill="rgba(59,130,246,.6)"/>
+            <circle cx="760" cy="100" r="2" fill="rgba(255,255,255,.3)"/>
+          </g>
+          <!-- Central presenter silhouette / podium suggestion -->
+          <g transform="translate(330,120)" opacity=".22">
+            <!-- Body -->
+            <ellipse cx="100" cy="220" rx="48" ry="15" fill="rgba(255,255,255,.3)"/>
+            <rect x="76" y="120" width="48" height="98" rx="8" fill="rgba(255,255,255,.5)"/>
+            <!-- Head -->
+            <circle cx="100" cy="105" r="24" fill="rgba(255,255,255,.5)"/>
+            <!-- Arms -->
+            <line x1="76" y1="145" x2="42" y2="185" stroke="rgba(255,255,255,.5)" stroke-width="14" stroke-linecap="round"/>
+            <line x1="124" y1="145" x2="158" y2="185" stroke="rgba(255,255,255,.5)" stroke-width="14" stroke-linecap="round"/>
+          </g>
+          <!-- Headline text suggestion at bottom -->
+          <rect x="220" y="390" width="420" height="12" rx="6" fill="rgba(255,255,255,.08)"/>
+          <rect x="280" y="412" width="300" height="8" rx="4" fill="rgba(255,255,255,.05)"/>
+        </svg>
+
+        <!-- Cinematic overlay -->
+        <div class="vt-overlay-top" aria-hidden="true"></div>
+
+        <!-- Official badge top-left -->
+        <div class="vt-badge" aria-hidden="true">
+          <div class="vt-badge-dot"></div>
+          Official Presentation
+        </div>
+
+        <!-- Play button -->
+        <div class="play-btn-outer" aria-hidden="true">
+          <div class="play-btn">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="#1d4ed8" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="6 3 20 12 6 21 6 3"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Duration badge -->
+        <div class="vt-duration" aria-hidden="true">12:47</div>
+
+        <!-- Fake progress bar -->
+        <div class="vt-progress" aria-hidden="true">
+          <div class="vt-progress-fill"></div>
+        </div>
+
+      </a>
+
+      <!-- Caption -->
+      <div class="video-caption" id="video-caption-label">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        Watch the Official Presentation
+        <span>· Free to watch · No sign-up</span>
+      </div>
+
     </div>
   </section>
 

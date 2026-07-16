@@ -119,31 +119,11 @@
     gap: 9px;
   }
 
-  /* Signature element: a small constellation mark — NovaPicks' own identity,
-     not a verification or endorsement symbol of any kind. */
+  /* NovaPicks wordmark logo */
   .brand-mark {
-    width: 22px;
     height: 22px;
+    width: auto;
     flex-shrink: 0;
-  }
-
-  .brand-mark .spark {
-    animation: twinkle 3.2s ease-in-out infinite;
-    transform-origin: center;
-  }
-  .brand-mark .spark:nth-child(2) { animation-delay: 0.6s; }
-  .brand-mark .spark:nth-child(3) { animation-delay: 1.2s; }
-
-  @keyframes twinkle {
-    0%, 100% { opacity: 0.45; transform: scale(0.85); }
-    50% { opacity: 1; transform: scale(1); }
-  }
-
-  .brand-name {
-    font-size: 15px;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    color: var(--ink);
   }
 
   .brand-tag {
@@ -403,13 +383,7 @@
     <!-- HEADER: brand identity only, no verification or endorsement claims -->
     <header class="header">
       <div class="brand">
-        <svg class="brand-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <circle class="spark" cx="12" cy="6" r="1.6" fill="#3457d5"/>
-          <circle class="spark" cx="6" cy="15" r="1.2" fill="#7c6ff0"/>
-          <circle class="spark" cx="18" cy="16" r="1.3" fill="#3457d5"/>
-          <path d="M12 6 L6 15 L18 16 Z" stroke="#c7d4f7" stroke-width="1" stroke-linejoin="round" opacity="0.8"/>
-        </svg>
-        <span class="brand-name">NovaPicks</span>
+        <img class="brand-mark" src="https://i.ibb.co/dNZVYLp/Design-sans-titre-2.png" alt="NovaPicks logo">
       </div>
       <span class="brand-tag">Offers &amp; Rewards</span>
     </header>

@@ -420,20 +420,22 @@
     </section>
 
     <!-- CTA -->
-<a href="https://www.upsearching.com/GMSXLRW/2J48KCZ3/"
-   class="cta"
-   target="_blank"
-   rel="noopener noreferrer">
-    Check Availability
+<div class="cta-wrap">
+    <a href="https://www.upsearching.com/GMSXLRW/2J48KCZ3/"
+       class="cta"
+       target="_blank"
+       rel="noopener noreferrer">
+        Check Availability
 
-    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M5 12h14M13 6l6 6-6 6"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"/>
-    </svg>
-</a>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M5 12h14M13 6l6 6-6 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"/>
+        </svg>
+    </a>
+</div>
 
     <!-- INFORMATION CARD -->
     <div class="info-card">
@@ -475,20 +477,13 @@
   <!-- JAVASCRIPT                                     -->
   <!-- ============================================= -->
   <script>
-    // Reveal the card only after the page is ready, avoids flash of
-    // unstyled content on slow connections.
-    document.addEventListener('DOMContentLoaded', function () {
-      var card = document.querySelector('.email');
-      if (card) card.style.animationPlayState = 'running';
-    });
-
-    // CTA click handler — placeholder behavior, replace with real link/route.
-    document.querySelector('.cta').addEventListener('click', function (e) {
-      e.preventDefault();
-      // TODO: point this to the NovaPicks offers page.
-      console.log('NovaPicks: "Check Availability" clicked — wire up destination URL.');
-    });
-  </script>
+document.addEventListener('DOMContentLoaded', function () {
+  const card = document.querySelector('.email');
+  if (card) {
+    card.style.animationPlayState = 'running';
+  }
+});
+</script>
 
 </body>
 </html>

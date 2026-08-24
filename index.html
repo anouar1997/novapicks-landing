@@ -1,1053 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
 <title>Preparing Your Offer...</title>
 
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<!-- ========================= -->
-<!-- META PIXEL -->
-<!-- ========================= -->
-
+<!-- Meta Pixel -->
 <script>
-
 !function(f,b,e,v,n,t,s)
 {
-    if(f.fbq)return;
-
-    n=f.fbq=function()
-    {
-        n.callMethod ?
-        n.callMethod.apply(n,arguments) :
-        n.queue.push(arguments)
-    };
-
-    if(!f._fbq)f._fbq=n;
-
-    n.push=n;
-    n.loaded=!0;
-    n.version='2.0';
-    n.queue=[];
-
-    t=b.createElement(e);
-    t.async=!0;
-    t.src=v;
-
-    s=b.getElementsByTagName(e)[0];
-
-    s.parentNode.insertBefore(t,s);
-
+if(f.fbq)return;
+n=f.fbq=function(){
+n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+};
+if(!f._fbq)f._fbq=n;
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
 }
-(
-    window,
-    document,
-    'script',
-    'https://connect.facebook.net/en_US/fbevents.js'
-);
+(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
 
-
-/* YOUR NOVAPICKS PIXEL */
-
-fbq(
-    'init',
-    '4293323117647867'
-);
-
-
-/* PAGE VIEW */
-
-fbq(
-    'track',
-    'PageView'
-);
-
+fbq('init', '4293323117647867');
+fbq('track', 'PageView');
 </script>
 
-
 <noscript>
-
 <img
 height="1"
 width="1"
 style="display:none"
 src="https://www.facebook.com/tr?id=4293323117647867&ev=PageView&noscript=1"
 />
-
 </noscript>
-
-<!-- ========================= -->
-<!-- END META PIXEL -->
-<!-- ========================= -->
-
-
+<!-- End Meta Pixel -->
 
 <style>
 
 *{
-
 margin:0;
-
 padding:0;
-
 box-sizing:border-box;
-
 }
 
-
-html,
 body{
-
-width:100%;
-
-min-height:100%;
-
-}
-
-
-body{
-
-font-family:Arial,Helvetica,sans-serif;
-
-background:
-
-linear-gradient(
-135deg,
-#f4faff 0%,
-#ffffff 45%,
-#eef8ff 100%
-);
-
 min-height:100vh;
-
+font-family:Arial,Helvetica,sans-serif;
+background:#fffdfb;
+color:#1e1b19;
 display:flex;
-
-align-items:center;
-
 justify-content:center;
-
-padding:20px;
-
-color:#081d4f;
-
+align-items:center;
+padding:25px;
 }
-
-
 
 .page{
-
 width:100%;
-
-max-width:600px;
-
+max-width:720px;
 }
 
-
-
-/* ========================= */
-/* BRAND */
-/* ========================= */
-
-
-.brand{
-
-text-align:center;
-
-margin-bottom:20px;
-
-}
-
+/* LOGO */
 
 .logo{
-
-font-size:44px;
-
-font-weight:800;
-
+font-family:Georgia, "Times New Roman", serif;
+font-size:52px;
+font-weight:500;
 letter-spacing:-2px;
-
-background:
-
-linear-gradient(
-90deg,
-#0974d4,
-#23afe6
-);
-
--webkit-background-clip:text;
-
--webkit-text-fill-color:transparent;
-
-background-clip:text;
-
+margin-bottom:20px;
+color:#221f1d;
 }
 
-
-.logo-icon{
-
-font-size:23px;
-
-margin-left:4px;
-
-}
-
-
-
-/* ========================= */
 /* MAIN CARD */
-/* ========================= */
-
 
 .offer-card{
-
-position:relative;
-
-overflow:hidden;
-
 background:
-
 linear-gradient(
 135deg,
-#ffffff 0%,
-#f6fbff 45%,
-#e9f7ff 100%
+#ffe58a 0%,
+#ffd7ad 48%,
+#f6c9dc 100%
 );
 
-border:
-
-1px solid
-rgba(22,126,206,.10);
-
-border-radius:30px;
-
-padding:42px 36px 34px;
+border-radius:36px;
+padding:42px 38px 34px;
 
 box-shadow:
+0 12px 35px rgba(0,0,0,0.08);
 
-0 18px 55px
-rgba(20,90,150,.12);
-
+position:relative;
+overflow:hidden;
 }
 
-
-
-/* DECORATION */
-
-.offer-card::before{
-
+.offer-card:before{
 content:"";
-
 position:absolute;
-
-width:260px;
-
-height:260px;
-
-background:
-
-rgba(25,154,221,.08);
-
+width:240px;
+height:240px;
+background:rgba(255,255,255,.20);
 border-radius:50%;
-
-top:-150px;
-
-right:-100px;
-
+top:-100px;
+right:-80px;
+filter:blur(8px);
 }
 
-
-.offer-card::after{
-
-content:"";
-
-position:absolute;
-
-width:180px;
-
-height:180px;
-
-background:
-
-rgba(24,194,190,.08);
-
-border-radius:50%;
-
-bottom:-110px;
-
-left:-80px;
-
-}
-
-
-
-/* ========================= */
 /* STATUS */
-/* ========================= */
-
 
 .status{
-
-position:relative;
-
-z-index:2;
-
-display:inline-flex;
-
-align-items:center;
-
-gap:7px;
-
-background:#e8f7ff;
-
-color:#0876bd;
-
-padding:9px 15px;
-
-border-radius:30px;
-
-font-size:13px;
-
+font-size:14px;
 font-weight:700;
-
-margin-bottom:22px;
-
+margin-bottom:20px;
+position:relative;
+z-index:2;
 }
 
+.status span{
+background:rgba(255,255,255,.45);
+padding:8px 14px;
+border-radius:30px;
+}
 
-
-/* ========================= */
 /* TITLE */
-/* ========================= */
-
 
 h1{
-
+font-size:42px;
+line-height:1.03;
+letter-spacing:-1.5px;
+margin-bottom:18px;
 position:relative;
-
 z-index:2;
-
-font-size:38px;
-
-line-height:1.08;
-
-letter-spacing:-1.2px;
-
-color:#071d4d;
-
-margin-bottom:17px;
-
 }
 
-
-.highlight{
-
-background:
-
-linear-gradient(
-90deg,
-#0879d5,
-#18a8dd
-);
-
--webkit-background-clip:text;
-
--webkit-text-fill-color:transparent;
-
-background-clip:text;
-
-}
-
-
-.description{
-
-position:relative;
-
-z-index:2;
-
-font-size:17px;
-
-line-height:1.55;
-
-color:#526278;
-
+.subtitle{
+font-size:18px;
+line-height:1.5;
 margin-bottom:28px;
-
-}
-
-
-
-/* ========================= */
-/* FEATURES */
-/* ========================= */
-
-
-.features{
-
+color:#403b37;
 position:relative;
-
 z-index:2;
-
-display:grid;
-
-grid-template-columns:
-
-repeat(3,1fr);
-
-gap:10px;
-
-margin-bottom:30px;
-
 }
 
+/* TRUST */
 
-.feature{
-
-background:
-
-rgba(255,255,255,.82);
-
-border:
-
-1px solid
-rgba(23,131,207,.12);
-
-border-radius:16px;
-
-padding:14px 8px;
-
-text-align:center;
-
-font-size:12px;
-
-font-weight:700;
-
-color:#18345c;
-
-}
-
-
-.feature-icon{
-
-width:34px;
-
-height:34px;
-
-margin:0 auto 8px;
-
+.trust-row{
 display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-border-radius:50%;
-
-background:#eaf7ff;
-
-color:#0876c8;
-
-font-size:17px;
-
-}
-
-
-
-/* ========================= */
-/* LOADER */
-/* ========================= */
-
-
-.loader-box{
-
-position:relative;
-
-z-index:2;
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
 gap:12px;
-
-margin-bottom:25px;
-
+flex-wrap:wrap;
+margin-bottom:30px;
+position:relative;
+z-index:2;
 }
 
+.trust{
+background:rgba(255,255,255,.45);
+padding:10px 14px;
+border-radius:30px;
+font-size:14px;
+font-weight:600;
+}
+
+/* LOADER */
+
+.loader-area{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:14px;
+margin-bottom:24px;
+position:relative;
+z-index:2;
+}
 
 .loader{
-
-width:38px;
-
-height:38px;
-
-border:
-
-4px solid
-rgba(20,108,180,.12);
-
-border-top:
-
-4px solid
-#0a7ed4;
-
+width:34px;
+height:34px;
+border:4px solid rgba(0,0,0,.12);
+border-top:4px solid #221f1d;
 border-radius:50%;
-
-animation:
-
-spin .8s linear infinite;
-
+animation:spin .8s linear infinite;
 }
-
-
-.loader-text{
-
-font-size:14px;
-
-font-weight:700;
-
-color:#415a78;
-
-}
-
 
 @keyframes spin{
-
-0%{
-
+from{
 transform:rotate(0deg);
-
 }
 
-100%{
-
+to{
 transform:rotate(360deg);
-
+}
 }
 
+.loader-text{
+font-size:15px;
+font-weight:600;
 }
 
-
-
-/* ========================= */
 /* BUTTON */
-/* ========================= */
 
-
-.cta-button{
-
-position:relative;
-
-z-index:2;
-
+.click-button{
 display:flex;
-
 align-items:center;
-
 justify-content:center;
-
 gap:12px;
 
 width:100%;
 
-padding:17px 24px;
-
-background:
-
-linear-gradient(
-90deg,
-#075fc5,
-#087ed8
-);
-
+background:#211e1c;
 color:#ffffff;
 
-border:none;
+font-size:18px;
+font-weight:800;
+
+padding:17px 25px;
 
 border-radius:40px;
 
-font-size:18px;
-
-font-weight:800;
-
 text-decoration:none;
-
 cursor:pointer;
 
-box-shadow:
-
-0 10px 24px
-rgba(8,108,200,.22);
-
-transition:
-
-transform .2s ease,
-box-shadow .2s ease;
-
-}
-
-
-.cta-button:hover{
-
-transform:
-
-translateY(-2px);
-
-box-shadow:
-
-0 14px 30px
-rgba(8,108,200,.28);
-
-}
-
-
-.cta-button:active{
-
-transform:
-
-scale(.98);
-
-}
-
-
-.arrow{
-
-font-size:23px;
-
-}
-
-
-
-/* ========================= */
-/* SECURITY */
-/* ========================= */
-
-
-.secure{
+transition:.2s ease;
 
 position:relative;
-
 z-index:2;
-
-margin-top:15px;
-
-text-align:center;
-
-font-size:12px;
-
-color:#718096;
-
 }
 
+.click-button:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
 
+.click-button:active{
+transform:scale(.98);
+}
 
-/* ========================= */
+.arrow{
+font-size:22px;
+}
+
+/* SECURITY */
+
+.secure{
+text-align:center;
+margin-top:15px;
+font-size:12px;
+color:#5f5650;
+position:relative;
+z-index:2;
+}
+
 /* FOOTER */
-/* ========================= */
-
 
 .footer{
-
 text-align:center;
-
-font-size:12px;
-
-color:#7d8b9e;
-
-margin-top:18px;
-
+font-size:13px;
+color:#6d6660;
+margin-top:16px;
 line-height:1.5;
-
 }
 
-
-
-/* ========================= */
 /* MOBILE */
-/* ========================= */
-
 
 @media(max-width:600px){
 
 body{
-
-padding:13px;
-
+padding:15px;
 }
-
-
-.page{
-
-max-width:100%;
-
-}
-
 
 .logo{
-
-font-size:37px;
-
+font-size:42px;
 }
-
 
 .offer-card{
-
-padding:
-
-32px 22px 27px;
-
-border-radius:25px;
-
+padding:34px 24px 28px;
+border-radius:28px;
 }
-
 
 h1{
-
-font-size:31px;
-
+font-size:34px;
 }
 
-
-.description{
-
-font-size:15px;
-
+.subtitle{
+font-size:16px;
 }
 
-
-.features{
-
-gap:7px;
-
-}
-
-
-.feature{
-
-font-size:11px;
-
-padding:12px 5px;
-
-}
-
-
-.cta-button{
-
-font-size:17px;
-
-padding:16px;
-
+.trust{
+font-size:12px;
 }
 
 }
-
 
 </style>
 
 </head>
 
-
-
 <body>
-
 
 <div class="page">
 
-
-<!-- BRAND -->
-
-<div class="brand">
-
 <div class="logo">
-
-NovaPicks
-
-<span class="logo-icon">🛒</span>
-
+trimrx
 </div>
-
-</div>
-
-
-
-<!-- OFFER CARD -->
 
 <div class="offer-card">
 
-
 <div class="status">
-
-✓ Secure Online Access
-
+<span>✓ Secure & Verified Access</span>
 </div>
-
-
 
 <h1>
-
-Your personalized
-<span class="highlight">
-weight-loss offer
-</span>
-is almost ready.
-
+Your personalized offer is almost ready.
 </h1>
 
+<div class="subtitle">
+Please wait a moment while we prepare and verify your request.
+You will be redirected automatically.
+</div>
 
+<div class="trust-row">
 
-<div class="description">
+<div class="trust">
+✓ Online Process
+</div>
 
-Please wait while we securely prepare your request.
-You will be redirected automatically in just a moment.
+<div class="trust">
+✓ Secure Access
+</div>
+
+<div class="trust">
+✓ Fast Redirect
+</div>
 
 </div>
 
-
-
-<!-- FEATURES -->
-
-<div class="features">
-
-
-<div class="feature">
-
-<div class="feature-icon">
-✓
-</div>
-
-Online Access
-
-</div>
-
-
-
-<div class="feature">
-
-<div class="feature-icon">
-♢
-</div>
-
-Secure Process
-
-</div>
-
-
-
-<div class="feature">
-
-<div class="feature-icon">
-→
-</div>
-
-Fast Access
-
-</div>
-
-
-</div>
-
-
-
-<!-- LOADER -->
-
-<div class="loader-box">
+<div class="loader-area">
 
 <div class="loader"></div>
 
 <div class="loader-text">
-
 Preparing your offer...
-
 </div>
 
 </div>
-
-
-
-<!-- CTA BUTTON -->
 
 <a
 href="https://r9ebmun.com/?E=wVsOCY6r3WXFOsP5GTdxfC9GOm3iJU0T&s1="
+class="click-button"
 id="offerButton"
-class="cta-button"
 >
-
-GET STARTED NOW
-
-<span class="arrow">
-→
-</span>
-
+CONTINUE NOW
+<span class="arrow">→</span>
 </a>
 
-
-
 <div class="secure">
-
 🔒 Secure • Private • Fast
-
 </div>
 
-
 </div>
-
-
 
 <div class="footer">
-
 Please do not close this page.<br>
-
 You will be redirected automatically.
-
 </div>
 
-
 </div>
-
-
 
 <script>
-
-
-/* ========================= */
-/* OFFER URL */
-/* ========================= */
-
 
 const redirectURL =
 "https://r9ebmun.com/?E=wVsOCY6r3WXFOsP5GTdxfC9GOm3iJU0T&s1=";
 
-
-
-/* ========================= */
-/* SETTINGS */
-/* ========================= */
-
-
 const AUTO_REDIRECT_TIME = 2000;
+const PIXEL_DELAY = 350;
 
-const PIXEL_WAIT_TIME = 350;
-
-
-let redirectStarted = false;
+let redirected = false;
 
 
-
-/* ========================= */
-/* MANUAL BUTTON CLICK */
-/* ========================= */
-
+/* MANUAL CLICK */
 
 document
 .getElementById("offerButton")
-.addEventListener(
-"click",
-function(event)
-{
+.addEventListener("click", function(e){
 
-event.preventDefault();
+e.preventDefault();
 
+if(redirected) return;
 
-if(redirectStarted)
-{
-
-return;
-
-}
+redirected = true;
 
 
-redirectStarted = true;
+/* Track real button click */
 
-
-
-/* ========================= */
-/* META OFFER CLICK EVENT */
-/* ========================= */
-
-
-if(typeof fbq === "function")
-{
+if(typeof fbq === "function"){
 
 fbq(
 'trackCustom',
 'OfferClick',
 {
-source:'landing_page',
-button:'get_started_now'
+source: 'landing_page',
+button: 'continue_now'
 }
 );
 
 }
 
 
+/* Small delay so Pixel can send */
 
-/* Give Pixel a moment to send event */
+setTimeout(function(){
 
+window.location.href = redirectURL;
 
-setTimeout(
-function()
-{
+}, PIXEL_DELAY);
 
-window.location.href =
-redirectURL;
-
-},
-PIXEL_WAIT_TIME
-);
+});
 
 
-}
-);
-
-
-
-/* ========================= */
 /* AUTO REDIRECT */
-/* ========================= */
 
+setTimeout(function(){
 
-setTimeout(
-function()
-{
+if(!redirected){
 
-if(!redirectStarted)
-{
+redirected = true;
 
-redirectStarted = true;
-
-
-/*
-
-IMPORTANT:
-
-Auto redirect does NOT trigger OfferClick.
-
-OfferClick is only recorded when
-the visitor actually clicks the button.
-
-*/
-
-
-window.location.href =
-redirectURL;
+window.location.href = redirectURL;
 
 }
 
-},
-AUTO_REDIRECT_TIME
-);
-
+}, AUTO_REDIRECT_TIME);
 
 </script>
 
-
 </body>
-
 </html>

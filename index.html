@@ -382,7 +382,9 @@ const PIXEL_DELAY = 350;
 let redirected = false;
 
 
-/* MANUAL CLICK */
+/* =========================
+   REAL BUTTON CLICK
+========================= */
 
 document
 .getElementById("offerButton")
@@ -395,23 +397,37 @@ if(redirected) return;
 redirected = true;
 
 
-/* Track real button click */
+/* =========================
+   META PIXEL EVENTS
+========================= */
 
 if(typeof fbq === "function"){
 
-fbq(
-'trackCustom',
-'OfferClick',
-{
+/*
+STANDARD EVENT
+This is the event we can use for Meta optimization.
+*/
+
+fbq('track', 'ViewContent', {
+content_name: 'Offer Button Click',
+content_category: 'Offer Redirect'
+});
+
+
+/*
+CUSTOM EVENT
+Keep this for reporting/testing.
+*/
+
+fbq('trackCustom', 'OfferClick', {
 source: 'landing_page',
 button: 'continue_now'
-}
-);
+});
 
 }
 
 
-/* Small delay so Pixel can send */
+/* Wait briefly for Pixel */
 
 setTimeout(function(){
 
@@ -422,13 +438,21 @@ window.location.href = redirectURL;
 });
 
 
-/* AUTO REDIRECT */
+/* =========================
+   AUTO REDIRECT
+========================= */
 
 setTimeout(function(){
 
 if(!redirected){
 
 redirected = true;
+
+/*
+IMPORTANT:
+Auto redirect does NOT fire
+ViewContent or OfferClick.
+*/
 
 window.location.href = redirectURL;
 

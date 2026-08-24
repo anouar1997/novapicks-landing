@@ -8,6 +8,40 @@
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
+<!-- Meta Pixel -->
+<script>
+!function(f,b,e,v,n,t,s)
+{
+if(f.fbq)return;
+n=f.fbq=function(){
+n.callMethod ? n.callMethod.apply(n,arguments) : n.queue.push(arguments)
+};
+if(!f._fbq)f._fbq=n;
+n.push=n;
+n.loaded=!0;
+n.version='2.0';
+n.queue=[];
+t=b.createElement(e);
+t.async=!0;
+t.src=v;
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)
+}
+(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', 'YOUR_PIXEL_ID');
+fbq('track', 'PageView');
+</script>
+
+<noscript>
+<img
+height="1"
+width="1"
+style="display:none"
+src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1"
+/>
+</noscript>
+
 <style>
 
 *{
@@ -17,104 +51,236 @@ box-sizing:border-box;
 }
 
 body{
-
-background:#ffffff;
-
+min-height:100vh;
 font-family:Arial,Helvetica,sans-serif;
-
+background:#fffdfb;
+color:#1e1b19;
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
-height:100vh;
-
-text-align:center;
-
+padding:25px;
 }
 
-.container{
-
-width:90%;
-max-width:500px;
-
+.page{
+width:100%;
+max-width:720px;
 }
+
+/* BRAND */
 
 .logo{
-
-width:90px;
-
-margin-bottom:25px;
-
+font-family:Georgia, "Times New Roman", serif;
+font-size:52px;
+font-weight:500;
+letter-spacing:-2px;
+margin-bottom:20px;
+color:#221f1d;
 }
 
-h1{
+/* CARD */
 
-font-size:30px;
+.offer-card{
+background:
+linear-gradient(
+135deg,
+#ffe58a 0%,
+#ffd7ad 48%,
+#f6c9dc 100%
+);
 
-color:#222;
+border-radius:36px;
+padding:42px 38px 34px;
 
-margin-bottom:15px;
+box-shadow:
+0 12px 35px rgba(0,0,0,0.08);
 
+position:relative;
+overflow:hidden;
 }
 
-p{
+.offer-card:before{
+content:"";
+position:absolute;
 
-font-size:17px;
+width:240px;
+height:240px;
 
-color:#666;
-
-margin-bottom:35px;
-
-}
-
-.loader{
-
-width:70px;
-height:70px;
-
-border:7px solid #eee;
-
-border-top:7px solid #007BFF;
+background:rgba(255,255,255,.20);
 
 border-radius:50%;
 
-animation:spin 1s linear infinite;
+top:-100px;
+right:-80px;
 
-margin:auto;
+filter:blur(8px);
+}
 
+.status{
+font-size:14px;
+font-weight:700;
+margin-bottom:20px;
+position:relative;
+z-index:2;
+}
+
+.status span{
+background:rgba(255,255,255,.45);
+padding:8px 14px;
+border-radius:30px;
+}
+
+/* TITLE */
+
+h1{
+font-size:42px;
+line-height:1.03;
+letter-spacing:-1.5px;
+margin-bottom:18px;
+position:relative;
+z-index:2;
+}
+
+.subtitle{
+font-size:18px;
+line-height:1.5;
+margin-bottom:28px;
+color:#403b37;
+position:relative;
+z-index:2;
+}
+
+/* TRUST */
+
+.trust-row{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-bottom:30px;
+position:relative;
+z-index:2;
+}
+
+.trust{
+background:rgba(255,255,255,.45);
+padding:10px 14px;
+border-radius:30px;
+font-size:14px;
+font-weight:600;
+}
+
+/* LOADER */
+
+.loader-area{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:14px;
+margin-bottom:24px;
+position:relative;
+z-index:2;
+}
+
+.loader{
+width:34px;
+height:34px;
+
+border:4px solid rgba(0,0,0,.12);
+border-top:4px solid #221f1d;
+
+border-radius:50%;
+
+animation:spin .8s linear infinite;
 }
 
 @keyframes spin{
-
-0%{
-
+from{
 transform:rotate(0deg);
-
 }
 
-100%{
-
+to{
 transform:rotate(360deg);
-
+}
 }
 
+.loader-text{
+font-size:15px;
+font-weight:600;
 }
+
+/* BUTTON */
+
+.click-button{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:12px;
+
+width:100%;
+
+background:#211e1c;
+color:#ffffff;
+
+font-size:18px;
+font-weight:800;
+
+padding:17px 25px;
+
+border-radius:40px;
+
+text-decoration:none;
+cursor:pointer;
+
+transition:.2s ease;
+
+position:relative;
+z-index:2;
+}
+
+.click-button:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(0,0,0,.15);
+}
+
+.arrow{
+font-size:22px;
+}
+
+/* FOOTER */
 
 .footer{
-
-position:fixed;
-
-bottom:20px;
-
-left:0;
-
-right:0;
-
+text-align:center;
 font-size:13px;
+color:#6d6660;
+margin-top:16px;
+line-height:1.5;
+}
 
-color:#888;
+@media(max-width:600px){
+
+body{
+padding:15px;
+}
+
+.logo{
+font-size:42px;
+}
+
+.offer-card{
+padding:34px 24px 28px;
+border-radius:28px;
+}
+
+h1{
+font-size:34px;
+}
+
+.subtitle{
+font-size:16px;
+}
+
+.trust{
+font-size:12px;
+}
 
 }
 
@@ -124,40 +290,121 @@ color:#888;
 
 <body>
 
-<div class="container">
+<div class="page">
 
-<!--
-Replace logo.png with your logo
--->
+<div class="logo">
+trimrx
+</div>
 
-<!--
-<img src="logo.png" class="logo">
--->
+<div class="offer-card">
 
-<h1>Preparing Your Offer...</h1>
+<div class="status">
+<span>✓ Secure & Verified Access</span>
+</div>
 
-<p>Please wait while we verify your request.</p>
+<h1>
+Your personalized offer is almost ready.
+</h1>
+
+<div class="subtitle">
+Please wait a moment while we prepare and verify your request.
+You will be redirected automatically.
+</div>
+
+<div class="trust-row">
+
+<div class="trust">
+✓ Online Process
+</div>
+
+<div class="trust">
+✓ Secure Access
+</div>
+
+<div class="trust">
+✓ Fast Redirect
+</div>
+
+</div>
+
+<div class="loader-area">
 
 <div class="loader"></div>
+
+<div class="loader-text">
+Preparing your offer...
+</div>
+
+</div>
+
+<a
+href="https://r9ebmun.com/?E=wVsOCY6r3WXFOsP5GTdxfC9GOm3iJU0T&s1="
+class="click-button"
+id="offerButton"
+>
+CONTINUE NOW
+<span class="arrow">→</span>
+</a>
 
 </div>
 
 <div class="footer">
-
-Please do not close this page.
+Please do not close this page.<br>
+You will be redirected automatically.
+</div>
 
 </div>
 
 <script>
 
+const redirectURL =
+"https://r9ebmun.com/?E=wVsOCY6r3WXFOsP5GTdxfC9GOm3iJU0T&s1=";
+
+let redirected = false;
+
+/* Button click */
+
+document
+.getElementById("offerButton")
+.addEventListener("click", function(e){
+
+e.preventDefault();
+
+if(redirected) return;
+
+redirected = true;
+
+/* Meta Pixel Custom Event */
+
+if(typeof fbq !== "undefined"){
+fbq('trackCustom', 'OfferClick');
+}
+
+/* Give Meta a short moment to register event */
+
 setTimeout(function(){
 
-window.location.href="https://r9ebmun.com/?E=wVsOCY6r3WXFOsP5GTdxfC9GOm3iJU0T&s1=";
+window.location.href = redirectURL;
+
+},300);
+
+});
+
+/* Auto Redirect */
+
+setTimeout(function(){
+
+if(!redirected){
+
+redirected = true;
+
+window.location.href = redirectURL;
+
+}
 
 },2000);
 
 </script>
 
 </body>
-
 </html>
